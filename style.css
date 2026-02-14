@@ -1,0 +1,106 @@
+/* style.css — MurmurationIO */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #ffffff;
+}
+
+#canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  cursor: crosshair;
+}
+
+/* Tweakpane position override */
+.tp-dfwv {
+  position: fixed !important;
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 100;
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+}
+
+/* --- Freehand drawing overlay --- */
+
+.hidden {
+  display: none !important;
+}
+
+#freehand-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.freehand-modal {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.freehand-modal h3 {
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #333;
+  font-size: 14px;
+}
+
+#draw-canvas {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: crosshair;
+  display: block;
+  margin: 0 auto 16px;
+  touch-action: none;
+}
+
+.freehand-buttons {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.freehand-buttons button {
+  padding: 8px 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f8f8;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.freehand-buttons button:hover {
+  background: #eee;
+}
+
+.freehand-buttons button#freehand-done {
+  background: #1a1a2e;
+  color: #fff;
+  border-color: #1a1a2e;
+}
+
+.freehand-buttons button#freehand-done:hover {
+  background: #2a2a4e;
+}

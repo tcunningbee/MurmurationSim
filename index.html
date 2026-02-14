@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MurmurationIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  <div id="freehand-overlay" class="hidden">
+    <div class="freehand-modal">
+      <h3>Draw a bird shape</h3>
+      <canvas id="draw-canvas" width="250" height="250"></canvas>
+      <div class="freehand-buttons">
+        <button id="freehand-clear">Clear</button>
+        <button id="freehand-done">Done</button>
+        <button id="freehand-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
