@@ -1,4 +1,4 @@
-# MurmurationIO
+# Murmuration Sim
 
 Browser-based 3D starling murmuration generator with SVG export for pen plotting.
 
